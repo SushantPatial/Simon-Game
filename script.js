@@ -4,6 +4,16 @@ var userClickedPattern = [];
 var level = 0;
 var start = false;
 
+
+$(".key").click(function()
+{
+  if (start === false)
+  {
+    nextSequence();
+    start = true;
+  }
+});
+
 $(document).keypress(function(event)
 {
   if ((event.key === 'a' || event.key === 'A') && start === false)
@@ -69,7 +79,7 @@ function checkAnswer(currentLevel)
   } 
   else 
   {
-    $("h1").html("Game Over! Press A to restart.");
+    $("h1").html("Game Over! Press <span class='key'>A</span> to restart");
 
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
@@ -82,6 +92,15 @@ function checkAnswer(currentLevel)
     }, 200);
 
     restart();
+
+    $(".key").click(function()
+    {
+      if (start === false)
+      {
+        nextSequence();
+        start = true;
+      }
+    });
   }
 }
 
@@ -91,4 +110,6 @@ function restart()
   level = 0;
   start = false;
 }
+
+
 
