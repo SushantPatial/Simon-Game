@@ -1,7 +1,7 @@
 body 
 {
   text-align: center;
-  background-color: #011F3F;
+  background-color:rgb(70, 6, 20);
 }
 
 #level-title 
@@ -10,16 +10,20 @@ body
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
-  line-height: 70px;
+  line-height: 80px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 .key
 {
   background-color: white;
   padding:17px 10px 10px 17px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius:10%;
-  color: black;
+  color: rgb(32, 32, 32);
+  position:relative;
+  text-shadow: none;
+  cursor: pointer;
 }
 
 .container 
@@ -37,6 +41,7 @@ body
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+  cursor: pointer;
 }
 
 .game-over 

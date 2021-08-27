@@ -3,7 +3,22 @@ var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
 var start = false;
+var keyColour = 0;
 
+
+setInterval(function ()
+{
+  if (keyColour === 0)
+  {
+    $(".key").animate({"top" : "6px"});
+    keyColour = 1;
+  }
+  else
+  {
+    $(".key").animate({"top" : "0"});
+    keyColour = 0;
+  }
+}, 700)
 
 $(".key").click(function()
 {
