@@ -75,3 +75,22 @@ body
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+p
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+a
+{
+  color:grey;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
